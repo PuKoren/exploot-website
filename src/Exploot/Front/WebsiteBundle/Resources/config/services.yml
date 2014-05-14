@@ -1,0 +1,7 @@
+parameters:
+#    exploot_front_website.example.class: Exploot\Front\WebsiteBundle\Example
+
+services:
+#    exploot_front_website.example:
+#        class: %exploot_front_website.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

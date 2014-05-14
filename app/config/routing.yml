@@ -1,0 +1,4 @@
+exploot_front_website:
+    resource: "@ExplootFrontWebsiteBundle/Resources/config/routing.yml"
+    prefix:   /
+
