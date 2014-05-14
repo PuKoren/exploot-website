@@ -4,7 +4,7 @@
         <body>
             <trans-unit id="1">
                 <source>welcome_text</source>
-                <target>Symfony fait le travail pour l'instant</target>
+                <target>Symfony is doing the job so far</target>
             </trans-unit>
         </body>
     </file>
