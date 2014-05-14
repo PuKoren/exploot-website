@@ -3,8 +3,8 @@
     <file source-language="en" datatype="plaintext" original="file.ext">
         <body>
             <trans-unit id="1">
-                <source>welcome_text</source>
-                <target>Symfony fait le travail pour l'instant</target>
+                <source>page_title</source>
+                <target>Exploot - Un jeu de plate-forme massivement multijoueur</target>
             </trans-unit>
         </body>
     </file>

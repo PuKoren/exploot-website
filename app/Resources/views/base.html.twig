@@ -10,10 +10,24 @@
         {% endstylesheets %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <div id="header" class="header">
+            <h1 class="title">Exploot</h1>
+            <ul class="menu">
+                <li>{{'menu_home' | trans}}</li>
+                <li>{{'menu_info' | trans}}</li>
+                <li>{{'menu_download' | trans}}</li>
+                <li>{{'menu_forum' | trans}}</li>
+                <li>{{'menu_contact' | trans}}</li>
+            </ul>
+        </div>
+        <div id="container" class="container">
+            {% block body %}{% endblock %}
+        </div>
         
         {% javascripts '@ExplootFrontWebsiteBundle/Resources/public/js/*' %}
-        <script type="text/javascript" src="{{ asset_url }}"></script>
+            <script type="text/javascript" src="{{ asset_url }}"></script>
         {% endjavascripts %}
+
+        <div id="footer" class="footer"></div>
     </body>
 </html>
