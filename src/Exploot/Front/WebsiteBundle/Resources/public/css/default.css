@@ -1,3 +1,17 @@
+body{
+	font-family: 'News Cycle';
+	font-weight: normal;
+	font-style: normal; 
+}
+
+a{
+	text-decoration: none;
+}
+a:visited{
+	text-decoration: none;
+	color:inherit;
+}
+
 /*******************
 ********************
 **HEADER SECTION !**
@@ -13,7 +27,9 @@
 
 	text-transform:uppercase;
 
-	font-family: 'Raleway', sans-serif;
+	position:fixed;
+	width:100%;
+	top:0;
 }
 
 .header .title{
@@ -28,7 +44,6 @@
 	position: absolute;
 	right:100px;
 	font-size: 1.25em;
-
 	color: #888;
 }
 
@@ -37,11 +52,9 @@
 .header .menu a{
 	cursor: pointer;
 	position:relative;
-	padding: 10px;
-	margin-right: 50px;
+	padding: 5px;
+	margin-left:10px;
 	color: #3E3F41;
-	font-weight: 700;
-	letter-spacing: 1px;
 	text-shadow: none;
 	-webkit-transition: color 0.3s;
 	-moz-transition: color 0.3s;
@@ -113,11 +126,46 @@
 **********************/
 
 .container{
-	min-height:800px;
+	
 }
 
+/***********
+*** HOME ***
+***********/
 .container .home{
-	background-image: url('../images/castle.jpg');
+	height:800px;
+	background: url('../images/castle.jpg') center 0 no-repeat fixed;
+}
+.container .home2{
+	height:800px;
+	background: url('../images/cascade.jpg') center 0 no-repeat fixed;
+}
+
+.container .home .catchphraseContainer,
+.container .home2 .catchphraseContainer{
+	position: absolute;
+	margin-top: 200px;
+	text-shadow: 1px 1px 2px #000;
+}
+
+.container .home .catchphraseContainer h1,
+.container .home2 .catchphraseContainer h1{
+	font-size: 5em;
+	color: white;
+	max-width: 750px;
+	margin: 10px;
+	margin-left: 100px;
+	margin-right: 50px;
+}
+.container .home .catchphraseContainer p,
+.container .home2 .catchphraseContainer p{
+	color:white;
+	margin: 20px;
+	margin-left: 100px;
+	margin-right: 50px;
+	max-width:750px;
+	font-size:1.5em;
+	text-align: justify;
 }
 
 
@@ -136,6 +184,4 @@
 
 	text-align: center;
 	font-weight: bold;
-
-	font-family: 'Raleway', sans-serif;
 }

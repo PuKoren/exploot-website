@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-
+        <link rel="stylesheet" media="screen" href="http://openfontlibrary.org/face/news-cycle" rel="stylesheet" type="text/css"/> 
         {% stylesheets  '@css_reset'
                         '@ExplootFrontWebsiteBundle/Resources/public/css/*'
                         filter='css_url_rewrite' output='css/main.css' %}
@@ -12,18 +12,21 @@
         {% endstylesheets %}
     </head>
     <body>
-        <!-- HEADER -->
-        {{include('ExplootFrontWebsiteBundle::header.html.twig')}}
-
         <!-- VIEW -->
         <section id="container" class="container">
             {% block body %}{% endblock %}
         </section>
 
+        <!-- HEADER -->
+        {{include('ExplootFrontWebsiteBundle::header.html.twig')}}
+
         <!-- FOOTER -->
         {{include('ExplootFrontWebsiteBundle::footer.html.twig')}}
 
-        {% javascripts '@ExplootFrontWebsiteBundle/Resources/public/js/*' output='js/main.js' %}
+        {% javascripts 
+            'http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js'
+            '@ExplootFrontWebsiteBundle/Resources/public/js/libs/*'
+            '@ExplootFrontWebsiteBundle/Resources/public/js/*' output='js/main.js' %}
             <script type="text/javascript" src="{{ asset_url }}"></script>
         {% endjavascripts %}
     </body>
