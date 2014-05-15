@@ -5,8 +5,9 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 
-        {% stylesheets  '@ExplootFrontWebsiteBundle/Resources/public/css/reset.min.css'
-                        '@ExplootFrontWebsiteBundle/Resources/public/css/*' filter='cssrewrite' %}
+        {% stylesheets  '@css_reset'
+                        '@ExplootFrontWebsiteBundle/Resources/public/css/*'
+                        filter='cssembed' output='css/main.css' %}
             <link rel="stylesheet" href="{{ asset_url }}" />
         {% endstylesheets %}
     </head>
@@ -15,14 +16,14 @@
         {{include('ExplootFrontWebsiteBundle::header.html.twig')}}
 
         <!-- VIEW -->
-        <div id="container" class="container">
+        <section id="container" class="container">
             {% block body %}{% endblock %}
-        </div>
+        </section>
 
         <!-- FOOTER -->
         {{include('ExplootFrontWebsiteBundle::footer.html.twig')}}
 
-        {% javascripts '@ExplootFrontWebsiteBundle/Resources/public/js/*' %}
+        {% javascripts '@ExplootFrontWebsiteBundle/Resources/public/js/*' output='js/main.js' %}
             <script type="text/javascript" src="{{ asset_url }}"></script>
         {% endjavascripts %}
     </body>

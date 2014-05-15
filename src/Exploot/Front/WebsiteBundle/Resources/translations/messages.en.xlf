@@ -6,6 +6,26 @@
                 <source>page_title</source>
                 <target>Exploot - A massively multiplayer online platformer game</target>
             </trans-unit>
+            <trans-unit id="2">
+                <source>menu_home</source>
+                <target>Home</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>menu_info</source>
+                <target>The game</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>menu_download</source>
+                <target>Downloads</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>menu_forum</source>
+                <target>Community</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>menu_contact</source>
+                <target>About us</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
