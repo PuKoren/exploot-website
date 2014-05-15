@@ -4,30 +4,8 @@
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-
-        {% stylesheets '@ExplootFrontWebsiteBundle/Resources/public/css/*' filter='cssrewrite' %}
-            <link rel="stylesheet" href="{{ asset_url }}" />
-        {% endstylesheets %}
     </head>
     <body>
-        <div id="header" class="header">
-            <h1 class="title">Exploot</h1>
-            <ul class="menu">
-                <li>{{'menu_home' | trans}}</li>
-                <li>{{'menu_info' | trans}}</li>
-                <li>{{'menu_download' | trans}}</li>
-                <li>{{'menu_forum' | trans}}</li>
-                <li>{{'menu_contact' | trans}}</li>
-            </ul>
-        </div>
-        <div id="container" class="container">
-            {% block body %}{% endblock %}
-        </div>
-        
-        {% javascripts '@ExplootFrontWebsiteBundle/Resources/public/js/*' %}
-            <script type="text/javascript" src="{{ asset_url }}"></script>
-        {% endjavascripts %}
-
-        <div id="footer" class="footer"></div>
+        {% block body %}{% endblock %}
     </body>
 </html>
